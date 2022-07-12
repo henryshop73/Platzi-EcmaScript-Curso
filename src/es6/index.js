@@ -81,4 +81,44 @@ console.log(globalVar);
 // - No se puede easignar un valor a una constante
 
 const a = "b";
-a = "a"; // No se puede reasignar este valora a
+a = "a"; // No se puede reasignar este valor a la constante a
+
+// Asignación de objetos
+
+let name = 'Oscar';
+let age = 32;
+
+// es5
+obj = { name: name, age: age};
+
+// es6
+obj2 = { name, age};
+console.log(obj2);
+
+// Arrow functions
+
+const names = [
+    { name: 'Oscar', age: 32 },
+    { name: 'Jessica', age: 27 }
+]
+
+let listOfNames = names.map(function (item) {
+    console.log(item.name);
+}) 
+
+// - es6
+
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {    // Otra forma
+    ...
+}
+
+const lisOfNames4 = name => {                    // Otra forma al pasar un solo parámetro
+    ...
+}
+
+const square = num => num * num; // En este caso no tengo que generar un return. es más directo
+
+// Promesas
+
